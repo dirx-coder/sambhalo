@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📋 Sambhalo
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![NextAuth.js](https://img.shields.io/badge/NextAuth.js-000000?style=for-the-badge&logo=nextauth.js&logoColor=white)
 
-First, run the development server:
+**Sambhalo** (meaning "manage" or "take care of") is a full-stack, Next.js App Router-based Kanban board application designed to streamline personal task management. It offers a secure, intuitive, and highly responsive interface for organizing workflows with seamless drag-and-drop capabilities.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✨ Features
+
+- **Secure Authentication:** Integrated NextAuth.js supporting both Google OAuth and passwordless Email Magic Links.
+- **Robust Database:** MongoDB paired with Mongoose for structured, scalable data modeling.
+- **Modern UI/UX:** Clean, dark-mode optimized interface built with Tailwind CSS and Lucide React icons.
+- **RESTful API:** A fully functional backend API for managing boards, columns, tasks, and complex drag-and-drop reordering logic.
+
+## 🛠️ Tech Stack
+
+- **Frontend:** Next.js (App Router), React 19, Tailwind CSS v4, Lucide React
+- **Backend:** Next.js Route Handlers, Node.js
+- **Database:** MongoDB, Mongoose, @auth/mongodb-adapter
+- **Authentication:** NextAuth.js (v4), Nodemailer (for magic links)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have Node.js installed, along with a MongoDB cluster (e.g., MongoDB Atlas) and a Google Cloud Console project for OAuth credentials.
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory and configure the following variables:
+
+```env
+# Database
+MONGODB_URI=your_mongodb_connection_string
+
+# NextAuth
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your_nextauth_secret
+
+# Google OAuth
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+
+# Email / Magic Link (SMTP config)
+EMAIL_SERVER_USER=your_email_user
+EMAIL_SERVER_PASSWORD=your_email_password
+EMAIL_SERVER_HOST=smtp.example.com
+EMAIL_SERVER_PORT=587
+EMAIL_FROM=noreply@example.com
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation & Running Locally
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Clone the repository and install dependencies:
+   ```bash
+   npm install
+   # or yarn install / pnpm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🏗️ Project Status & Roadmap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The project has established a rock-solid foundation with a complete backend architecture, authentication flow, and initial UI setup. 
 
-## Deploy on Vercel
+### ✅ Completed
+- Next.js App Router & Tailwind setup.
+- MongoDB integration and Mongoose schemas (`Board`, `Column`, `Task`).
+- Login page UI with Google/Email authentication.
+- Full API routes for CRUD operations and Kanban reordering logic.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🚧 Coming Soon (Work in Progress)
+- **Interactive Drag-and-Drop Kanban UI:** Implementing the frontend visual board using a DnD library.
+- **Optimistic UI Updates:** Enhancing perceived performance during task creation and column reordering.
+- **Task Management Modals:** Interfaces for editing task details and deleting items.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page if you want to contribute.
