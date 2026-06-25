@@ -7,18 +7,21 @@
 
 **Sambhalo** (meaning "manage" or "take care of") is a full-stack, Next.js App Router-based Kanban board application designed to streamline personal task management. It offers a secure, intuitive, and highly responsive interface for organizing workflows with seamless drag-and-drop capabilities.
 
----
+🔗 **Repository:** [https://github.com/dirx-coder/sambhalo.git](https://github.com/dirx-coder/sambhalo.git)
 
+---
+ 
 ## ✨ Features
 
 - **Secure Authentication:** Integrated NextAuth.js supporting both Google OAuth and passwordless Email Magic Links.
 - **Robust Database:** MongoDB paired with Mongoose for structured, scalable data modeling.
-- **Modern UI/UX:** Clean, dark-mode optimized interface built with Tailwind CSS and Lucide React icons.
+- **Modern UI/UX:** Stunning dark-mode optimized interface built with Tailwind CSS, Framer Motion animations, and Lucide React icons.
+- **Interactive Drag-and-Drop:** Fluid Kanban board experience using `dnd-kit`.
 - **RESTful API:** A fully functional backend API for managing boards, columns, tasks, and complex drag-and-drop reordering logic.
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** Next.js (App Router), React 19, Tailwind CSS v4, Lucide React
+- **Frontend:** Next.js (App Router), React 19, Tailwind CSS v4, Framer Motion, @dnd-kit, Lucide React
 - **Backend:** Next.js Route Handlers, Node.js
 - **Database:** MongoDB, Mongoose, @auth/mongodb-adapter
 - **Authentication:** NextAuth.js (v4), Nodemailer (for magic links)
@@ -59,6 +62,8 @@ EMAIL_FROM=noreply@example.com
 
 1. Clone the repository and install dependencies:
    ```bash
+   git clone https://github.com/dirx-coder/sambhalo.git
+   cd sambhalo
    npm install
    # or yarn install / pnpm install
    ```
@@ -74,18 +79,18 @@ EMAIL_FROM=noreply@example.com
 
 ## 🏗️ Project Status & Roadmap
 
-The project has established a rock-solid foundation with a complete backend architecture, authentication flow, and initial UI setup. 
+The project has established a rock-solid foundation with a complete backend architecture, authentication flow, and a beautiful animated UI.
 
 ### ✅ Completed
 - Next.js App Router & Tailwind setup.
 - MongoDB integration and Mongoose schemas (`Board`, `Column`, `Task`).
-- Login page UI with Google/Email authentication.
+- Login & Home page UI with Google/Email authentication and Framer Motion animations.
 - Full API routes for CRUD operations and Kanban reordering logic.
+- **Interactive Drag-and-Drop Kanban UI:** Frontend visual board using `dnd-kit` with a premium dark-mode aesthetic.
 
 ### 🚧 Coming Soon (Work in Progress)
-- **Interactive Drag-and-Drop Kanban UI:** Implementing the frontend visual board using a DnD library.
-- **Optimistic UI Updates:** Enhancing perceived performance during task creation and column reordering.
-- **Task Management Modals:** Interfaces for editing task details and deleting items.
+- **Task Management Modals:** Expanded interfaces for editing detailed task descriptions, managing attachments, and adding comments.
+- **Collaborative Features:** Real-time updates and multi-user board sharing.
 
 ## 🤝 Contributing
 
